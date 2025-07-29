@@ -4,8 +4,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog, simpledialog, messagebox
 from pathlib import Path
 from PIL import ImageTk
-from modules import hypertext_parser, image_generator, logger
-from modules.logger import log
+from modules import hypertext_parser, image_generator 
+from modules.logger import EventLogger
 
 
 class DemoKitGUI(tk.Tk):
@@ -13,8 +13,9 @@ class DemoKitGUI(tk.Tk):
 
     SIDEBAR_WIDTH = 320
 
-    def __init__(self, doc_store, processor):
+    def __init__(self, root, doc_store, processor):
         super().__init__()
+        self.root = root
         self.doc_store = doc_store
         self.processor = processor
         self.logger: Logger = processor.logger if hasattr(processor, "logger") else Logger()

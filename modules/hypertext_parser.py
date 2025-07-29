@@ -28,3 +28,11 @@ def parse_links(text_widget: tk.Text, raw_text: str, on_open_doc):
             return lambda _evt, _did=did: on_open_doc(int(_did))
 
         text_widget.tag_bind("link", "<Button-1>", _make_callback(doc_id))
+
+def extract_links(body):
+    pattern = r"\[.*?\]\(doc:(\d+)\)"
+    return re.findall(pattern, body)
+
+def extract_links_with_titles(body):
+    pattern = r"\[(.*?)\]\(doc:(\d+)\)"
+    return re.findall(pattern, body)

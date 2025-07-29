@@ -1,12 +1,12 @@
 import openai
-from modules.logger import Logger
+from modules.logger import EventLogger
 from modules.document_store import DocumentStore
-
+dbpath="storage/documents.db"
 class CommandProcessor:
     def __init__(self, store: DocumentStore, ai_interface, logger=None):
         self.doc_store = store
         self.ai = ai_interface
-        self.logger = logger if logger else Logger()
+        self.logger = logger if logger else EventLogger(dbpath)
 
     def ask_question(self, prompt: str) -> str:
         try:

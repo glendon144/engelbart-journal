@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 doc_id,title,body,created,last_modified,created_at,updated_at
 1,,"It could run on Raspberry Pi.
 I'm excited to be building a system like Doug Englebart's that he used in the Mother of All Demos.  
@@ -1905,3 +1906,7 @@ So, (X=100, Y=100) is 100 units to the right and 100 units down from the top-lef
 Keep in mind, the units here aren’t necessarily pixels. They represent position units according to the programming environment used.
 
 This process of positioning the cursor can particularly be handy while designing user interfaces or when you want to automate cursor movements for tasks like testing software interfaces or gaming.",,,,
+=======
+doc_id,title,body,created,last_modified
+1,,I'm excited this is working!,2025-07-27 09:44:01.257705,2025-07-27 09:44:43.842198
+>>>>>>> 7ca3a9c0 (Initial check-in of Demokit phase 5.1 CLI revival)
